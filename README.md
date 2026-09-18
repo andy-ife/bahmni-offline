@@ -4,7 +4,7 @@ Repo to hold bahmni offline code. This will support Chromium app and Android app
 **To run android app**
 
 //** Use Below commands in terminal **//
-1. install Node.js. if you dont have it
+1. install Node.js v22.22.3
 2. npm install -g cordova ionic, for any issues with ionic installation refer http://ionicframework.com/getting-started/
 3. npm install -g try-thread-sleep
 4. export ANDROID_HOME=/Users/user/Library/Android/sdk
@@ -12,6 +12,7 @@ Repo to hold bahmni offline code. This will support Chromium app and Android app
 5. Add the following sdk packages
    Android 5.1.1(API 22) platform
 6. checkout cd bahmni-offline/android
+6.5. npx npm-check-updates -u
 7. cordova platform rm android
 8. cordova platform add android
 9. cordova build android
