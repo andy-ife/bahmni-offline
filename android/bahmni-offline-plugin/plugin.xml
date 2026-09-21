@@ -44,5 +44,14 @@
         <source-file src="src/android/org/bahmni/offline/services/AppUpdateService.java" target-dir="app/src/main/java/org/bahmni/offline/services" />
         <source-file src="src/android/org/bahmni/offline/services/DbService.java" target-dir="app/src/main/java/org/bahmni/offline/services" />
         <source-file src="src/android/org/bahmni/offline/services/EncryptionService.java" target-dir="app/src/main/java/org/bahmni/offline/services" />
+            <resource-file src="src/android/assets/metadata_migration_0.sql" target="assets/metadata_migration_0.sql" />
+        <resource-file src="src/android/assets/metadata_migration_1.sql" target="assets/metadata_migration_1.sql" />
+        <resource-file src="src/android/assets/migration_0.sql" target="assets/migration_0.sql" />
+        <resource-file src="src/android/assets/migration_1.sql" target="assets/migration_1.sql" />
+        <resource-file src="src/android/assets/migration_2.sql" target="assets/migration_2.sql" />
+        <resource-file src="src/android/assets/migration_3.sql" target="assets/migration_3.sql" />
+        <resource-file src="src/android/assets/migration_4.sql" target="assets/migration_4.sql" />
     </platform>
 </plugin>
+
+

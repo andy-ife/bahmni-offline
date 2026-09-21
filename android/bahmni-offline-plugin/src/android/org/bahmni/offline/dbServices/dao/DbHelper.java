@@ -43,19 +43,24 @@ public class DbHelper extends SQLiteOpenHelper {
         }
     }
 
-    public void runMigration(SQLiteDatabase db, String filename) {
+        public void runMigration(SQLiteDatabase db, String filename) {
         try {
-            InputStream inputStream = myContext.getAssets().open(filename);
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+            java.io.InputStream inputStream = myContext.getAssets().open(filename);
+            java.io.BufferedReader bufferedReader = new java.io.BufferedReader(new java.io.InputStreamReader(inputStream));
             String sqlStatements = "";
             while (bufferedReader.ready()) {
-                sqlStatements += bufferedReader.readLine();
+                sqlStatements += bufferedReader.readLine() + "\n";
             }
             sqlStatements = replaceParameters(sqlStatements);
             bufferedReader.close();
-            db.execSQL(sqlStatements);
+            
+            for (String statement : sqlStatements.split(";")) {
+                if (statement.trim().length() > 0) {
+                    db.execSQL(statement);
+                }
+            }
         } catch (Exception ex) {
-            ex.printStackTrace();
+            android.util.Log.e("DbHelper", "Error in migration " + filename, ex);
         }
     }
 
@@ -92,3 +97,4 @@ public class DbHelper extends SQLiteOpenHelper {
         executeSql(sqlToCreateIndex);
     }
 }
+
