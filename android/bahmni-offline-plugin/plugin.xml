@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="org.bahmni.offline.services" version="1.0.0">
+    <name>Bahmni Offline Services</name>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="BahmniOfflinePlugin">
+                <param name="android-package" value="org.bahmni.offline.BahmniOfflinePlugin" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+        
+        <framework src="joda-time:joda-time:2.10.13" />
+        <framework src="com.google.guava:guava:31.0.1-android" />
+
+        <source-file src="src/android/org/bahmni/offline/AddressField.java" target-dir="app/src/main/java/org/bahmni/offline" />
+        <source-file src="src/android/org/bahmni/offline/AddressHierarchyEntry.java" target-dir="app/src/main/java/org/bahmni/offline" />
+        <source-file src="src/android/org/bahmni/offline/AddressHierarchyLevel.java" target-dir="app/src/main/java/org/bahmni/offline" />
+        <source-file src="src/android/org/bahmni/offline/Constants.java" target-dir="app/src/main/java/org/bahmni/offline" />
+        <source-file src="src/android/org/bahmni/offline/Util.java" target-dir="app/src/main/java/org/bahmni/offline" />
+        <source-file src="src/android/org/bahmni/offline/BahmniOfflinePlugin.java" target-dir="app/src/main/java/org/bahmni/offline" />
+        
+        <source-file src="src/android/org/bahmni/offline/dbServices/dao/AddressHierarchyDbService.java" target-dir="app/src/main/java/org/bahmni/offline/dbServices/dao" />
+        <source-file src="src/android/org/bahmni/offline/dbServices/dao/ConceptDbService.java" target-dir="app/src/main/java/org/bahmni/offline/dbServices/dao" />
+        <source-file src="src/android/org/bahmni/offline/dbServices/dao/ConfigDbService.java" target-dir="app/src/main/java/org/bahmni/offline/dbServices/dao" />
+        <source-file src="src/android/org/bahmni/offline/dbServices/dao/DbHelper.java" target-dir="app/src/main/java/org/bahmni/offline/dbServices/dao" />
+        <source-file src="src/android/org/bahmni/offline/dbServices/dao/EncounterDbService.java" target-dir="app/src/main/java/org/bahmni/offline/dbServices/dao" />
+        <source-file src="src/android/org/bahmni/offline/dbServices/dao/ErrorLogDbService.java" target-dir="app/src/main/java/org/bahmni/offline/dbServices/dao" />
+        <source-file src="src/android/org/bahmni/offline/dbServices/dao/FormDbService.java" target-dir="app/src/main/java/org/bahmni/offline/dbServices/dao" />
+        <source-file src="src/android/org/bahmni/offline/dbServices/dao/LabOrderDbService.java" target-dir="app/src/main/java/org/bahmni/offline/dbServices/dao" />
+        <source-file src="src/android/org/bahmni/offline/dbServices/dao/LocationDbService.java" target-dir="app/src/main/java/org/bahmni/offline/dbServices/dao" />
+        <source-file src="src/android/org/bahmni/offline/dbServices/dao/MarkerDbService.java" target-dir="app/src/main/java/org/bahmni/offline/dbServices/dao" />
+        <source-file src="src/android/org/bahmni/offline/dbServices/dao/ObservationDbService.java" target-dir="app/src/main/java/org/bahmni/offline/dbServices/dao" />
+        <source-file src="src/android/org/bahmni/offline/dbServices/dao/PatientAddressDbService.java" target-dir="app/src/main/java/org/bahmni/offline/dbServices/dao" />
+        <source-file src="src/android/org/bahmni/offline/dbServices/dao/PatientAttributeDbService.java" target-dir="app/src/main/java/org/bahmni/offline/dbServices/dao" />
+        <source-file src="src/android/org/bahmni/offline/dbServices/dao/PatientDbService.java" target-dir="app/src/main/java/org/bahmni/offline/dbServices/dao" />
+        <source-file src="src/android/org/bahmni/offline/dbServices/dao/PatientIdentifierDbService.java" target-dir="app/src/main/java/org/bahmni/offline/dbServices/dao" />
+        <source-file src="src/android/org/bahmni/offline/dbServices/dao/ReferenceDataDbService.java" target-dir="app/src/main/java/org/bahmni/offline/dbServices/dao" />
+        <source-file src="src/android/org/bahmni/offline/dbServices/dao/SearchDbService.java" target-dir="app/src/main/java/org/bahmni/offline/dbServices/dao" />
+        <source-file src="src/android/org/bahmni/offline/dbServices/dao/VisitDbService.java" target-dir="app/src/main/java/org/bahmni/offline/dbServices/dao" />
+        
+        <source-file src="src/android/org/bahmni/offline/receivers/AppUpdateReceiver.java" target-dir="app/src/main/java/org/bahmni/offline/receivers" />
+        <source-file src="src/android/org/bahmni/offline/receivers/DownloadReceiver.java" target-dir="app/src/main/java/org/bahmni/offline/receivers" />
+        
+        <source-file src="src/android/org/bahmni/offline/services/AppUpdateService.java" target-dir="app/src/main/java/org/bahmni/offline/services" />
+        <source-file src="src/android/org/bahmni/offline/services/DbService.java" target-dir="app/src/main/java/org/bahmni/offline/services" />
+        <source-file src="src/android/org/bahmni/offline/services/EncryptionService.java" target-dir="app/src/main/java/org/bahmni/offline/services" />
+    </platform>
+</plugin>

@@ -11,6 +11,7 @@
         "gulp-sass": "^6.0.1"
     },
     "devDependencies": {
+        "bahmni-offline-plugin": "file:bahmni-offline-plugin",
         "bower": "^1.8.14",
         "cordova-android": "^15.1.0",
         "gulp-util": "^3.0.8",
@@ -32,6 +33,9 @@
         "platforms": [
             "ios",
             "android"
-        ]
+        ],
+        "plugins": {
+            "org.bahmni.offline.services": {}
+        }
     }
 }

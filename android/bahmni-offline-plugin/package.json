@@ -1,0 +1,16 @@
+﻿{
+  "name": "bahmni-offline-plugin",
+  "version": "1.0.0",
+  "description": "Cordova plugin for Bahmni Offline Services",
+  "cordova": {
+    "id": "org.bahmni.offline.services",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "bahmni",
+    "offline"
+  ]
+}
